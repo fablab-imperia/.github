@@ -1,0 +1,8 @@
+name: Task
+description: A concrete unit of work — chore, refactor, docs
+type: Task
+body:
+  - type: textarea
+    id: task
+    attributes: { label: What needs doing }
+    validations: { required: true }
