@@ -44,6 +44,36 @@ Reviews are done by volunteers in their spare time, so please be patient.
 - **User-facing documentation and READMEs: English or Italian** (Italian is welcome, and translations are especially valued).
 - Follow the existing conventions of the repository you're working in (naming, structure, formatting). Each repo may add its own specifics in its README.
 
+## Commit messages and versioning
+
+Across Fablab Imperia repositories we follow two widely-used conventions:
+
+- **[Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)** for commit messages. Each message starts with a type, optionally followed by a scope, then a short description:
+
+  ```
+  feat(sensor): add null-read fallback
+  fix: correct temperature offset
+  docs(readme): document build steps
+  ```
+
+  The most common types and when to use them:
+
+  - **`feat`** — a new feature or capability for the user.
+  - **`fix`** — a bug fix.
+  - **`docs`** — documentation-only changes (README, comments, guides).
+  - **`style`** — formatting or whitespace changes that don't affect behaviour.
+  - **`refactor`** — code changes that neither fix a bug nor add a feature.
+  - **`perf`** — a change that improves performance.
+  - **`test`** — adding or fixing tests.
+  - **`build`** — changes to the build system or dependencies.
+  - **`ci`** — changes to CI configuration or scripts.
+  - **`chore`** — routine maintenance that doesn't touch source or tests.
+  - **`revert`** — reverts a previous commit.
+
+  A breaking change is marked with a `!` after the type/scope (e.g. `feat!:`) or with a `BREAKING CHANGE:` footer. Consistent commit messages make history easier to read and let us automate changelogs and releases.
+
+- **[Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html)** for release numbers, in the form `MAJOR.MINOR.PATCH`: increment `MAJOR` for incompatible changes, `MINOR` for backward-compatible features, and `PATCH` for backward-compatible fixes.
+
 ## Licensing
 
 Each repository states its own license (for example GPL-3.0 for software, or CERN-OHL-S and CC-BY-SA for hardware and documentation). By contributing, you agree that your contribution is provided under that repository's license, and that you have the right to submit it. In line with the Fab Charter, what we make should remain available for others to use and learn from.

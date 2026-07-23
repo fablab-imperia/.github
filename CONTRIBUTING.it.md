@@ -44,6 +44,36 @@ Le revisioni sono svolte da volontari nel loro tempo libero, quindi ti chiediamo
 - **Documentazione per gli utenti e README: inglese o italiano** (l'italiano è benvenuto, e le traduzioni sono particolarmente apprezzate).
 - Segui le convenzioni già presenti nel repository su cui lavori (nomi, struttura, formattazione). Ogni repo può aggiungere le proprie specifiche nel README.
 
+## Messaggi di commit e versioning
+
+In tutti i repository di Fablab Imperia seguiamo due convenzioni ampiamente adottate:
+
+- **[Conventional Commits 1.0.0](https://www.conventionalcommits.org/it/v1.0.0/)** per i messaggi di commit. Ogni messaggio inizia con un tipo, seguito facoltativamente da uno scope e poi da una breve descrizione:
+
+  ```
+  feat(sensor): add null-read fallback
+  fix: correct temperature offset
+  docs(readme): document build steps
+  ```
+
+  I tipi più comuni e quando usarli:
+
+  - **`feat`** — una nuova funzionalità per l'utente.
+  - **`fix`** — la correzione di un bug.
+  - **`docs`** — modifiche alla sola documentazione (README, commenti, guide).
+  - **`style`** — modifiche di formattazione o spaziatura che non alterano il comportamento.
+  - **`refactor`** — modifiche al codice che non correggono bug né aggiungono funzionalità.
+  - **`perf`** — una modifica che migliora le prestazioni.
+  - **`test`** — aggiunta o correzione di test.
+  - **`build`** — modifiche al sistema di build o alle dipendenze.
+  - **`ci`** — modifiche alla configurazione o agli script di CI.
+  - **`chore`** — manutenzione ordinaria che non tocca codice sorgente o test.
+  - **`revert`** — annulla un commit precedente.
+
+  Una modifica non retrocompatibile (breaking change) si segnala con un `!` dopo il tipo/scope (es. `feat!:`) oppure con un footer `BREAKING CHANGE:`. Messaggi di commit coerenti rendono la cronologia più leggibile e ci permettono di automatizzare changelog e rilasci.
+
+- **[Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html)** per i numeri di versione, nella forma `MAJOR.MINOR.PATCH`: incrementa `MAJOR` per modifiche non retrocompatibili, `MINOR` per funzionalità retrocompatibili e `PATCH` per correzioni retrocompatibili.
+
 ## Licenze
 
 Ogni repository indica la propria licenza (ad esempio GPL-3.0 per il software, oppure CERN-OHL-S e CC-BY-SA per hardware e documentazione). Contribuendo, accetti che il tuo contributo sia fornito secondo la licenza di quel repository e dichiari di avere il diritto di inviarlo. In linea con la Fab Charter, ciò che realizziamo dovrebbe restare disponibile affinché altri possano usarlo e impararne.
